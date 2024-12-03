@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+  <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+  <link href="jQueryAssets/jquery.ui.slider.min.css" rel="stylesheet" type="text/css">
+  <title>Nayla's Portofolio Website</title>
+  <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+  <script src="jQueryAssets/jquery.ui-1.10.4.slider.min.js"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #607274;
+    color: #322C2B;
+  }
+
+  header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 3rem;
+    color: #EBE3D5;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.6s ease;
+  }
+
+  .logo-hover {
+    transform: scale(1.1);
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 1.8rem;
+    color: #B2A59B;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.5s ease;
+    border-bottom: 3px solid transparent;
+  }
+
+  nav a:hover,
+  nav a.active {
+    color: #EBE3D5;
+    border-bottom: 3px solid #F3EEEA;
+  }
+
+  @media(max-width:995px) {
+    nav {
+      position: absolute;
+      display: none;
+      top: 0;
+      right: 0;
+      width: 40%;
+      border-left: 3px solid #e5ddc5;
+      border-bottom: 3px solid #A79277;
+      border-bottom-left-radius: 2rem;
+      padding: 1rem solid;
+      background-color: none border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+      display: block;
+    }
+
+    nav a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border-bottom: 0.5rem solid #c4c1b2;
+    }
+  }
+
+  section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+  }
+
+  .social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #9babb8;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #bed7dc;
+  }
+
+  .social-icons a:hover {
+    color: #776B5D;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #bed7dc;
+    box-shadow: 0 0 25px #bed7dc;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #607274;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #EBE3D5;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #9babb8;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    transform: scale3d(1.03);
+    background-color: #bed7dc;
+    color: #776B5D;
+    box-shadow: 0 0 25px #bed7dc;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 8px;
+    font-size: 10px;
+    border: 1px solid #FAEED1;
+    float: left;
+    width: 80%;
+    background: ;
+  }
+
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 8px;
+    background: #bed7dc;
+    color: #FAEED1;
+    font-size: 10px;
+    border: 1px solid #FAEED1;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+  }
+
+  form.example button:hover {
+    background: #FAEED1;
+  }
+
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #607274;
+    color: #FAEED1;
+    font-style: italic;
+  }
+
+  table,
+  th,
+  td {
+    border: 0px solid ;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: large;
+    color: #EBE3D5;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  body {
+    font-family: Verdana, sans-serif;
+    font-size: x-large;
+    text-align: center;
+  }
+
+  /* Month header */
+  .month {
+    padding: 20px 15px;
+    width: 100%;
+    background: #c4c1b2;
+    text-align: center;
+  }
+
+  /* Month list */
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .month ul li {
+    color:;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  /* Previous button inside month header */
+  .month .prev {
+    float: left;
+    padding-top: 15px;
+  }
+
+  /* Next button */
+  .month .next {
+    float: right;
+    padding-top: 15px;
+  }
+
+  /* Weekdays (Mon-Sun) */
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #e4e0e1;
+  }
+
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #493628;
+    text-align: center;
+  }
+
+  /* Days (1-31) */
+  .days {
+    padding: 10px 0;
+    background: #c4c1b2;
+    margin: 0;
+  }
+
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #4a4947;
+  }
+
+  /* Highlight the "current" day */
+  .days li .active {
+    padding: 5px;
+    background: #607274;
+    color: white !important
+  }
+</style>
+
+<body onLoad="MM_preloadImages('file:///F|/test 2 portofolio/Portofolio-Project-/nanay11.jpg','file:///C|/Users/Admin/Documents/test 2 portofolio/nanay17.jpg','file:///C|/Users/Admin/Documents/test 2 portofolio/nanay21.jpg')">
+  <header>
+    <a href="index.html" class="logo">Nayla Alzahra</a>
+
+    <nav>
+      <a href="index.html"> Home</a>
+      <a href="aboutme.html" class="active">Profile</a>
+      <a href="portofolio.html">Portofolio</a>
+		<a href="contact.html">Ask me!</a>
+    </nav>
+    <nav>
+      <form class="example" action="#">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </nav>
+  </header>
+  <section class="main" id="section1">
+    <br><br><br>
+    <h1><strong style="font-size: 300%; text-align: left; font-weight: bold; color: #c4c1b2; font-style: oblique;">
+        <span>
+          <marquee scrolldelay='50' style="font-size: smaller"> :: about me.</marquee>
+    </span></strong>
+</h1>
+    </div>
+    <div>
+
+    </div>
+    <table width="100%" border="0">
+      <tbody>
+          <td width="50%" rowspan="2">
+            <frame>
+		    <img src="file:///C|/Users/Admin/Documents/test 2 portofolio/kalender.jpg" width="469" height="432" alt=""/>
+</frame>
+		    <td>
+		  </td>
+          </td>
+        </tr>
+        </td>
+        <td style="font-size: 25px; text-align: justify;color: #bed7dc;">
+          Hello, my name is <b style="color: #EBE3D5;">Nayla Alzahra</b>, but free to call me Nanay or whatever you
+          like.
+          I blow candles on my cake every <b style="color:#EBE3D5;"> 27th February</b>. I'm an Introvert who prefers
+          indoor activities, such as <strong style="color: #c4c1b2;">genshin, napping, doing makeup, watching anime and
+            reading alternative universe (au) in twitter.</strong>
+          Moving on to my personality, I'm not much of a talker in real life but when it comes to my best friends, I can
+          be downright crazy and sort of a troll.<br>
+          <br><p style="font-size: 25px;text-align: justify; color: #bed7dc;">Now I'm a student in <strong
+                style="color: #EBE3D5;">STMIK LIKMI BANDUNG</strong> and I take <strong
+                style="color:#c4c1b2;">Information System major</strong>. I'm in the first semester this year.<span style="color: #EBE3D5"><br>
+          </span></p>
+          <span style="color: #EBE3D5">
+          </p>
+          </span>
+          <p></td>
+<td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>
+		    <p style="font-size: 25px;text-align: justify; color: #bed7dc;"><b style="font-weight: bold; font-size: xx-large;">ACTIVITIES</b>
+	                 
+	        <li style="color: #C4C1B2">2024 - <em>PRESENT</em></li>
+			    <p><span style="font-style: italic">Leader of Ukhuwah LIKMI Community </span><br>                
+		    <p>                  
+		    <li style="color: #C4C1B2">2024 -<em> PRESENT</em></li>	  
+			  <p><em>Member of Cakrawala Literasi Sastra (CLS)</em><br>
+		      <p>              
+	        <li style="color: #C4C1B2">2023 - 2024</li>
+					  <p> <span style="color: #EBE3D5"><em>Secretary</em> <em>of Keputrian PR IPM SMAMSA</em> <br>
+                    </span></p>
+            <span style="color: #EBE3D5">
+            </p>
+            </span>
+		    <p><br>
+            <p><br>
+	
+</td>
+<td>
+	<p style="text-align: left; font-size: xx-large; font-weight: bold; color: #C4C1B2;">GALLERY</p>
+	<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','file:///F|/test 2 portofolio/Portofolio-Project-/nanay11.jpg',1)"><img src="file:///F|/test 2 portofolio/Portofolio-Project-/nanay10.jpg" alt="" width="162" height="216" id="Image5"></a>
+    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','file:///C|/Users/Admin/Documents/test 2 portofolio/nanay17.jpg',1)"><img src="file:///C|/Users/Admin/Documents/test 2 portofolio/nanay16.jpg" alt="" width="162" height="216" id="Image6"></a>
+    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','file:///C|/Users/Admin/Documents/test 2 portofolio/nanay21.jpg',1)"><img src="file:///C|/Users/Admin/Documents/test 2 portofolio/nanay20.jpg" alt="" width="162" height="216" id="Image7"></a>
+
+</td>
+
+      </tr>
+<tr>
+	<td>
+		<h2 style="text-align: center; font-size: xx-large;">LANGUAGE</h2>
+	</td>
+	<td> <h2 style="text-align: center; font-size: xx-large; color: #bed7dc;">SOFTWARE</h2></td>
+  <p></p>
+
+<tr>
+	<td>
+		<li>
+			<label for="file"><span style="color: #BED7DC">Indonesian:</span></label>
+          <span style="color: #BED7DC">
+            <progress id="file" value="100" max="100"> 100% </progress>
+      </span></li>
+		<li>
+			<label for="file" style="color: #C4C1B2">Sundanese</label>
+<progress max="100" value="85" id="file" style="color: #C4C1B2"> 85% </progress>
+		</li>
+		<li>
+			<label for="file"><span style="color: #bed7dc">English:</span></label>
+          <span style="color: #bed7dc">
+            <progress id="file" value="75" max="100"> 75%</progress>
+		</li>
+		<li><label for="file">Korean:</label>
+<progress id="file" value="25" max="100"> 25% </progress></li>
+		<li>
+      <label for="file">Japanese:</label>
+<progress id="file" value="12" max="100"> 12% </progress>
+    </li>
+	</td>
+	<td class="logo-hover">
+		<figure> <a href="https://www.adobe.com/in/products/dreamweaver.html?msockid=20ef2ca6b48f6a2f322039eeb5d96b7c"><img src="file:///F:/test%202%20portofolio/Portofolio-Project-/adobe_dw.png" width="41"></a>
+			<figcaption style="color: #C4C1B2"><span style="font-weight: bold">Adobe Dreamweaver</span></figcaption>
+	      <span style="font-weight: bold"><a href="https://code.visualstudio.com/"><img src="file:///F:/test%202%20portofolio/Portofolio-Project-/vscode.png" width="38"></a></span>
+<figcaption style="font-weight: bold">Visual Studio Code</figcaption>
+<a href="https://www.capcut.com/"><img src="file:///F:/test%202%20portofolio/Portofolio-Project-/capcut.webp" width="38"></a>
+			<figcaption style="color: #bed7dc; font-weight: bold;">Capcut</figcaption>
+          <a href="https://www.microsoft.com/id-id/microsoft-365/free-office-online-for-the-web?msockid=20ef2ca6b48f6a2f322039eeb5d96b7c"><img src="file:///F:/test 2 portofolio/Portofolio-Project-/office.jpg" width="38"></a>
+		  <figcaption style="color: #C4C1B2; font-weight: bold;">Microsoft Office</figcaption>
+		</figure>
+	</td>
+</tr>
+        <tr>
+          <div class="coloumns" align="center">
+            <div class="social-icons">
+              <a alt
+                href="https://www.linkedin.com/in/nayla-alzahra-7967b6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/dazaissi"><i class="fa-brands fa-github"></i></a>
+              <a href="https://wa.me/+6283853085889"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://instagram.com/piscesnaay"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://discord.gg/ZtKuVbPS"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <td>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div>
+      <div>
+
+  </section>
+  <footer>
+    <p style="font-size: small">© 2024 Nayla Alzahra | All right reserved.</p>
+</footer>
+  <script type="text/javascript">
+    $(function () {
+      $("#Slider1").slider();
+    });
+  </script>
+</body>
+
+</html>
