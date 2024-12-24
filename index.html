@@ -2,7 +2,7 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <title>home - 홈</title>
+    <title>Nayla's Portofolio Website</title>
   </head>
 
   <style>
@@ -45,7 +45,7 @@
           top: 0;
           left: 0;
           width: 100%;
-          padding: 0.5rem 9%;
+          padding: 1rem 9%;
           background-color: transparent;
           filter: drop-shadow(10px);
           display: flex;
@@ -81,38 +81,38 @@
           border-bottom: 3px solid #F3EEEA;
       }
 
-     @media(max-width:360px) {
-        nav {
-            position: absolute;
-            display: none;
-            top: 0;
-            right: 0;
-            width: 40%;
-            border-left: 3px solid #e5ddc5;
-            border-bottom: 3px solid #A79277;
-            border-bottom-left-radius: 2rem;
-            padding: 1rem solid;
-            background-color: none;
-            border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-        }
+      @media(max-width:995px){
+          nav{
+              position: absolute;
+              display: none;
+              top: 0;
+              right: 0;
+              width: 40%;
+              border-left: 3px solid #e5ddc5 ;
+              border-bottom: 3px solid #A79277;
+              border-bottom-left-radius: 2rem;
+              padding: 1rem solid;
+              background-color: none
+              border-top: 0.1rem solid rgba(0,0,0,0.1);
+          }
 
-        nav.active {
-            display: block;
-        }
+          nav.active{
+              display: block;
+          }
 
-        nav a {
-            display: block;
-            font-size: 2rem;
-            margin: 3rem 0;
-        }
+          nav a{
+              display: block;
+              font-size: 2rem;
+              margin: 3rem 0;
+          }
 
-        nav a:hover,
-        nav a.active {
-            padding: 1rem;
-            border-radius: 0.5rem;
-            border-bottom: 0.5rem solid #c4c1b2;
-        }
-    }
+          nav a:hover,
+          nav a.active{
+              padding: 1rem;
+              border-radius: 0.5rem;
+              border-bottom: 0.5rem solid #9babb8;
+          }
+      }
 
       section{
           min-height: 100vh;
@@ -247,7 +247,7 @@
           21%, 40%{
               content: "Video Editor"}
 
-    41%, 60%{
+    50%, 80%{
     	content: "Photographer"}
      }
 
@@ -257,7 +257,7 @@
           }
       }
 
-      @media(max-width: 995px){
+      @media(max-width:995px){
           .home{
               flex-direction: column;
               margin: 5rem 4rem;
@@ -333,6 +333,8 @@
         <a href="aboutme.html">Profile</a>
         <a href="portofolio.html">Portofolio</a>
         <a href="contact.html">Ask Me!</a>
+      </nav>
+      <nav>
         <form class="example" action="#">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit"><i class="fa fa-search"></i></button>
@@ -342,10 +344,7 @@
 
     <section class="home">
       <div class="home-img">
-        <img
-          src="main.jpeg"
-          alt="Nanay's-photo-1"
-        />
+        <img src="main.jpeg" alt="Nanay's-photo-1" />
       </div>
 
       <div class="home-content">
@@ -369,7 +368,7 @@
           <a href="https://instagram.com/piscesnaay"
             ><i class="fa-brands fa-instagram"></i
           ></a>
-          <a href="https://discord.gg/RCwc6kE8hV"
+          <a href="https://discord.gg/ZtKuVbPS"
             ><i class="fa-brands fa-discord"></i
           ></a>
         </div>
