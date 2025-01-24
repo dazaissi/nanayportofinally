@@ -440,23 +440,34 @@ body, button, input {
 
 <body>
 <header>
-        <a href="index.html" class="logo">Nayla Alzahra</a>
+    <a href="index.html" class="logo">Nayla Alzahra</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i> <!-- Hamburger icon -->
+    </button>
+    <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="aboutme.html">Profile</a>
+        <a href="portofolio.html">Portofolio</a>
+        <a href="contact.html">Ask Me!</a>
+    </nav>
+    <nav>
+        <form class="example" action="#">
+            <input type="text" placeholder="Search.." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+</header>
 
-        <nav>
-            <a href="index.html"> Home</a>
-            <a href="aboutme.html">Profile</a>
-            <a href="portofolio.html">Portofolio</a>
-            <a href="contact.html" class="active">Ask Me!</a>
-        </nav>
-        <nav>
-            <span>
-                <form class="example" action="#">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-            </span>
-            </form>
-        </nav>
-    </header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('active'); // Toggle the 'active' class
+        });
+    });
+</script>
 	
 	<section>
 	<div class="background">
