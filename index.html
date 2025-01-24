@@ -1,338 +1,225 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <title>Nayla's Portofolio Website</title>
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <title>Nayla's Portfolio Website</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+        * {
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: "Poppins", sans-serif;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
-      border: none;
-      outline: none;
-      font-family: 'Poppins', sans-serif;
-    }
+        html {
+            font-size: 62.5%;
+        }
 
-    html {
-      font-size: 62.5%;
-    }
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            background-color: #607274;
+            color: #322c2b;
+        }
 
-    body {
-      width: 100%;
-      height: 100vh;
-      overflow-x: hidden;
-      background-color: #607274;
-      color: #EAD8C0;
-    }
+        header {
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            background-color: transparent;
+            filter: drop-shadow(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
 
-    header {
-      margin-top: 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem 9%;
-      background-color: transparent;
-      filter: drop-shadow(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-    }
+        .logo {
+            font-size: 3rem;
+            color: #ebe3d5;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.6s ease;
+        }
 
-    .logo {
-      font-size: 3rem;
-      color: #EBE3D5;
-      font-weight: 800;
-      cursor: pointer;
-      transition: 0.6s ease;
-    }
+        .logo:hover {
+            transform: scale(1.1);
+        }
 
-    .logo:hover {
-      transform: scale(1.1);
-    }
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-    nav a {
-      font-size: 1.8rem;
-      color: #B2A59B;
-      margin-left: 4rem;
-      font-weight: 500;
-      transition: 0.5s ease;
-      border-bottom: 3px solid transparent;
-    }
+        nav a {
+            font-size: 1.8rem;
+            color: #b2a59b;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.5s ease;
+            border-bottom: 3px solid transparent;
+        }
 
-    nav a:hover,
-    nav a.active {
-      color: #EBE3D5;
-      border-bottom: 3px solid #F3EEEA;
-    }
+        nav a:hover,
+        nav a.active {
+            color: #ebe3d5;
+            border-bottom: 3px solid #f3eeea;
+        }
 
-    @media(max-width: 995px) {
-      nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 60%; /* Increased width for mobile */
-        border-left: 3px solid #e5ddc5;
-        border-bottom: 3px solid #A79277;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: none;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-      }
+        .menu-toggle {
+            display: none;
+            font-size: 2.5rem;
+            color: #ebe3d5;
+            cursor: pointer;
+        }
 
-      nav.active {
-        display: block;
-      }
+        @media (max-width: 995px) {
+            nav {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #607274;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 50;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
 
-      nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-      }
+            nav.active {
+                transform: translateX(0);
+            }
 
-      nav a:hover,
-      nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #9babb8;
-      }
+            nav a {
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
 
-      .home {
-        flex-direction: column;
-        margin: 5rem 4rem;
-      }
+            nav a:hover,
+            nav a.active {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                border-bottom: 0.5rem solid #c4c1b2;
+            }
 
-      .home .home-content h3 {
-        font-size: 2.5rem;
-      }
+            .menu-toggle {
+                display: block;
+            }
+        }
 
-      .home-content h1 {
-        font-size: 5rem;
-      }
+        /* Styles for Contact Form */
+        section {
+            min-height: 100vh;
+            padding: 5rem 9% 5rem;
+        }
 
-      .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
-      }
-    }
+        footer {
+            text-align: center;
+            padding: 5px;
+            background-color: #607274;
+            color: #faeed1;
+            font-style: italic;
+        }
+    </style>
+</head>
 
-    section {
-      min-height: 100vh;
-      padding: 5rem 9% 5rem;
-    }
-
-    .home {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8rem;
-      background-color: #607274;
-    }
-
-    .home .home-content h1 {
-      font-size: 90px;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-
-    span {
-      color: #ADC4CE;
-    }
-
-    .home-content h3 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .home-content p {
-      font-size: 20px;
-    }
-
-    .home-img {
-      border-radius: 50%;
-    }
-
-    .home-img img {
-      position: relative;
-      width: 32vw;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: 0.2s linear;
-    }
-
-    .home-img img:hover {
-      font-size: 1.8rem;
-      font-weight: 500;
-    }
-
-    .social-icons a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 4rem;
-      height: 4rem;
-      background-color: transparent;
-      border: 0.2rem solid #9babb8;
-      font-size: 2rem;
-      border-radius: 50%;
-      margin: 3rem 1.5rem 3rem 0;
-      transition: 0.3s ease;
-      color: #bed7dc;
-    }
-
-    .social-icons a:hover {
-      color: #776B5D;
-      transform: scale(1.3) translateY(-5px);
-      background-color: #bed7dc;
-      box-shadow: 0 0 25px #bed7dc;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 1rem 2.8rem;
-      background-color: #607274;
-      border-radius: 4rem;
-      font-size: 1.6rem;
-      color: #e5ddc5;
-      letter-spacing: 0.3rem;
-      font-weight: 600;
-      border: 2px solid #9babb8;
-      transition: 0.3s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: scale3d(1.03);
-      background-color: #bed7dc;
-      color: #776B5D;
-      box-shadow: 0 0 25px #bed7dc;
-    }
-
-    .typing-text {
-      font-size: 34px;
-      font-weight: 600;
-      min-width: 280px;
-    }
-
-    .typing-text span {
-      position: relative;
-    }
-
-    .typing-text span::before {
-      content: "";
-      color: #ADC4CE;
-      animation: words 10s infinite;
-    }
-
-    .typing-text span::after {
-      content: "";
-      background-color: #607274;
-      position: absolute;
-      width: calc(100% + 8px);
-      height: 100%;
-      animation: cursor 0.6s infinite;
-    }
-
-    @keyframes cursor {
-      to {
-        border-right: 3px solid #322C2B;
-      }
-    }
-
-    @keyframes words {
-      0%, 20% {
-        content: "Collage Student";
-      }
-
-      21%, 40% {
-        content: "Video Editor";
-      }
-
-      50%, 80% {
-        content: "Photographer";
-      }
-    }
-
-    footer {
-      text-align: center;
-      padding: 5px;
-      background-color: #607274;
-      color: #FAEED1;
-      font-style: italic;
-    }
-  </style>
-
-  <body>
+<body>
     <header>
-      <a href="index.html" class="logo">Nayla Alzahra</a>
-
-      <nav>
-        <a href="index.html" class="active"> Home</a>
-        <a href="aboutme.html">Profile</a>
-        <a href="portofolio.html">Portofolio</a>
-        <a href="contact.html">Ask Me!</a>
-      </nav>
-      <nav>
-        <form class="example" action="#">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </nav>
+        <a href="index.html" class="logo">Nayla Alzahra</a>
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">Profile</a>
+            <a href="portofolio.html">Portfolio</a>
+            <a href="contact.html" class="active">Ask Me!</a>
+        </nav>
+        <span class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></span>
     </header>
 
-    <section class="home">
-      <div class="home-img">
-        <img src="main.jpeg" alt="Nanay's-photo-1" />
-      </div>
+    <section>
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+                    <div class="screen-header">
+                        <div class="screen-header-left">
+                            <div class="screen-header-button close"></div>
+                            <div class="screen-header-button maximize"></div>
+                            <div class="screen-header-button minimize"></div>
+                        </div>
+                        <div class="screen-header-right">
+                            <div class="screen-header-ellipsis"></div>
+                            <div class="screen-header-ellipsis"></div>
+                            <div class="screen-header-ellipsis"></div>
+                        </div>
+                    </div>
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>CONTACT</span>
+                                <span>ME</span>
+                            </div>
+                            <div class="app-contact">CONTACT INFO : +62 838 5308 5889</div>
+                        </div>
+                        <div class="screen-body-item">
+                            <div class="app-form">
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="NAME" />
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="EMAIL" />
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="CONTACT NO" />
+                                </div>
+                                <div class="app-form-group message">
+                                    <input class="app-form-control" placeholder="MESSAGE" />
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-button">SEND</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="home-content">
-        <h1>Hi, It's <span>Nayla</span></h1>
-        <h3 class="typing-text">I'm a <span></span></h3>
-        <p>
-          Nanay | Female | 18 | INFJ-T | Pisces. <br />
-          Obsessed with Cheese, Makeup, Anime, Editing and Genshin.
-        </p>
-        <div class="social-icons">
-          <a
-            href="https://www.linkedin.com/in/nayla-alzahra-7967b6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/dazaissi"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://wa.me/+6283853085889"
-            ><i class="fa-brands fa-whatsapp"></i
-          ></a>
-          <a href="https://instagram.com/piscesnaay"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="https://discord.gg/ZtKuVbPS"
-            ><i class="fa-brands fa-discord"></i
-          ></a>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/nayla-alzahra-7967b6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/dazaissi"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.me/+6283853085889"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/piscesnaay"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://discord.gg/ZtKuVbPS"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
         </div>
-        <a href="contact.html" class="btn">Contact me</a>
-      </div>
     </section>
 
     <footer>
-      <p>© 2024 Nayla Alzahra | All rights reserved.</p>
+        <p>© 2024 Nayla Alzahra | All right reserved.</p>
     </footer>
-  </body>
+
+    <script>
+        // Toggle the mobile navbar
+        const menuToggle = document.getElementById("menuToggle");
+        const navbar = document.getElementById("navbar");
+
+        menuToggle.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    </script>
+</body>
+
 </html>
