@@ -16,18 +16,22 @@
   </head>
 
   <body>
+    //logo
     <header>
       <a href="index.html" class="logo">Nayla Alzahra</a>
        <button class="nav-toggle" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i> <!-- You can use an icon for the button -->
-    </button>
-      
+        <i class="fa fa-bars"></i> 
+        </button>
+
+      //navigation
       <nav>
-        <a href="index.html" class="active"> Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="aboutme.html">Profile</a>
         <a href="portofolio.html">Portofolio</a>
         <a href="contact.html">Ask Me!</a>
       </nav>
+
+      /*searchbar*/
       <nav>
         <form class="example" action="#">
           <input type="text" placeholder="Search.." name="search" />
@@ -36,17 +40,7 @@
       </nav>
     </header>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('nav');
-
-        navToggle.addEventListener('click', function() {
-            nav.classList.toggle('active'); // Toggle the 'active' class
-        });
-    });
-</script>
-
+    //photo//
     <section class="home">
       <div class="home-img">
         <img src="main.jpeg" alt="Nanay's-photo-1" />
@@ -59,6 +53,8 @@
           Nanay | Female | 18 | INFJ-T | Pisces. <br />
           Obsessed with Cheese, Makeup, Anime, Editing and Genshin.
         </p>
+
+        //icons
         <div class="social-icons">
           <a
             href="https://www.linkedin.com/in/nayla-alzahra-7967b6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
@@ -70,7 +66,7 @@
           <a href="https://wa.me/+6283853085889"
             ><i class="fa-brands fa-whatsapp"></i
           ></a>
-          <a href="https://instagram.com/piscesnaay"
+          <a href="https://instagram.com/nanaypixels"
             ><i class="fa-brands fa-instagram"></i
           ></a>
           <a href="https://discord.gg/ZtKuVbPS"
@@ -85,3 +81,4 @@
     </footer>
   </body>
 </html>
+
