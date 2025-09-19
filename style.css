@@ -68,7 +68,7 @@
       @media (max-width: 995px) {
         nav {
             position: absolute;
-            display: none; /* Hidden by default */
+            display: flex; /* Hidden by default */
             top: 0;
             right: 0;
             width: 40%;
@@ -81,11 +81,11 @@
         }
     
         nav.active {
-            display: block; /* Show when active */
+            display: flex; /* Show when active */
         }
     
         nav a {
-            display: block;
+            display: flex;
             font-size: 2rem;
             margin: 3rem 0;
         }
