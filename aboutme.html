@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="id"><head>
+<html lang="id">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -115,7 +116,7 @@ function MM_swapImage() { //v3.0
       border-bottom-left-radius: 2rem;
       padding: 1rem;
       background-color: rgba(255, 255, 255, 0.9); 
-	border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
 
     nav.active {
@@ -247,6 +248,45 @@ function MM_swapImage() { //v3.0
     font-weight: bold;
   }
 
+  /* Fix for progress bars */
+  .language-list, .software-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .language-list li, .software-list li {
+    margin-bottom: 15px;
+  }
+  
+  progress {
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+  }
+  
+  /* Fix for table structure */
+  .table-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .gallery img {
+    margin: 5px;
+    display: inline-block;
+  }
+  
+  .two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+  }
 </style>
 
 <body>
@@ -257,7 +297,7 @@ function MM_swapImage() { //v3.0
       <a href="index.html"> Home</a>
       <a href="aboutme.html" class="active">Profile</a>
       <a href="portofolio.html">Portofolio</a>
-		<a href="contact.html">Ask me!</a>
+      <a href="contact.html">Ask me!</a>
     </nav>
     <nav>
       <form class="example" action="#">
@@ -266,150 +306,168 @@ function MM_swapImage() { //v3.0
       </form>
     </nav>
   </header>
+  
   <section class="main" id="section1">
     <br><br><br>
     <h1><strong style="font-size: 500%; text-align: left; font-weight: bold; color: #c4c1b2; font-style: oblique;">
         <span>
           <marquee scrolldelay='50' style="font-size: xx-larger"> :: about me.</marquee>
-    </span></strong>
-</h1>
-    </div>
-    <div>
-
-    </div>
-    <table width="100%" border="0">
-      <tbody>
-          <td width="50%" rowspan="2">
-            <frame>
-		    <img src="kalender.jpg" width="469" height="432" alt=""/>
-</frame>
-		    <td>
-		  </td>
-          </td>
-        </tr>
-        </td>
-        <td style="font-size: 25px; text-align: justify;color: #bed7dc;">
-          Hello, my name is <b style="color: #EBE3D5;">Nayla Alzahra</b>, but free to call me Nanay or whatever you
-          like.
-          I blow candles on my cake every <b style="color:#EBE3D5;"> 27th February</b>. I'm an Introvert who prefers
-          indoor activities, such as <strong style="color: #c4c1b2;">genshin, napping, doing makeup, watching anime and
-            reading alternative universe (au) in twitter.</strong>
-          Moving on to my personality, I'm not much of a talker in real life but when it comes to my best friends, I can
-          be downright crazy and sort of a troll.<br>
-          <br><p style="font-size: 25px;text-align: justify; color: #bed7dc;">Now I'm a student in <strong
-                style="color: #EBE3D5;">STMIK LIKMI BANDUNG</strong> and I take <strong
-                style="color:#c4c1b2;">Information System major</strong>. I'm in the first semester this year.<span style="color: #EBE3D5"><br>
-          </span></p>
-          <span style="color: #EBE3D5">
-          </p>
-          </span>
-          <p></td>
-<td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>
-		    <p style="font-size: 25px;text-align: justify; color: #bed7dc;"><b style="font-weight: bold; font-size: xx-large;">ACTIVITIES</b>
-	                 
-	        <li style="color: #C4C1B2">2024 - <em>PRESENT</em></li>
-			    <p><span style="font-style: italic">Leader of Ukhuwah LIKMI Community </span><br>                
-		    <p>                  
-		    <li style="color: #C4C1B2">2024 -<em> PRESENT</em></li>	  
-			  <p><em>Member of Cakrawala Literasi Sastra (CLS)</em><br>
-		      <p>              
-	        <li style="color: #C4C1B2">2023 - 2024</li>
-					  <p> <span style="color: #EBE3D5"><em>Secretary</em> <em>of Keputrian PR IPM SMAMSA</em> <br>
-                    </span></p>
-            <span style="color: #EBE3D5">
-            </p>
-            </span>
-		    <p><br>
-            <p><br>
-	
-</td>
-<td>
-	<p style="text-align: left; font-size: xx-large; font-weight: bold; color: #C4C1B2;">GALLERY</p>
-	<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','nanay11.jpg',1)"><img src="nanay10.jpg" alt="" width="162" height="216" id="Image5"></a>
-    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','nanay17.jpg',1)"><img src="nanay16.jpg" alt="" width="162" height="216" id="Image6"></a>
-    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','nanay21.jpg',1)"><img src="nanay20.jpg" alt="" width="162" height="216" id="Image7"></a>
-
-</td>
-
-      </tr>
-<tr>
-	<td>
-		<h2 style="text-align: center; font-size: xx-large;">LANGUAGE</h2>
-	</td>
-	<td> <h2 style="text-align: center; font-size: xx-large; color: #bed7dc;">SOFTWARE</h2></td>
-		<li>
-			<label for="file"><span style="color: #BED7DC">Indonesian:</span></label>
-          <span style="color: #BED7DC">
-            <progress id="file" value="100" max="100"> 100% </progress>
-      </span></li>
-		<li>
-			<label for="file" style="color: #C4C1B2">Sundanese:</label>
-<progress max="100" value="85" id="file" style="color: #C4C1B2"> 85% </progress>
-		</li>
-		<li>
-			<label for="file"><span style="color: #bed7dc">English:</span></label>
-          <span style="color: #bed7dc">
-            <progress id="file" value="75" max="100"> 75%</progress>
-		</li>
-		<li><label for="file">Korean:</label>
-<progress id="file" value="25" max="100"> 25% </progress></li>
-		<li>
-      <label for="file">Japanese:</label>
-<progress id="file" value="12" max="100"> 12% </progress>
-    </li>
-	</td>
-	<td class="logo-hover">
-		<figure> <a href="https://www.adobe.com/in/products/dreamweaver.html?msockid=20ef2ca6b48f6a2f322039eeb5d96b7c"><img src="adobe_dw.png" width="41"></a>
-			<figcaption style="color: #C4C1B2"><span style="font-weight: bold">Adobe Dreamweaver</span></figcaption>
-	      <span style="font-weight: bold"><a href="https://code.visualstudio.com/"><img src="vscode.png" width="38"></a></span>
-<figcaption style="font-weight: bold">Visual Studio Code</figcaption>
-<a href="https://www.capcut.com/"><img src="capcut.webp" width="38"></a>
-			<figcaption style="color: #bed7dc; font-weight: bold;">Capcut</figcaption>
-          <a href="https://www.microsoft.com/id-id/microsoft-365/free-office-online-for-the-web?msockid=20ef2ca6b48f6a2f322039eeb5d96b7c"><img src="office.jpg" width="38"></a>
-		  <figcaption style="color: #C4C1B2; font-weight: bold;">Microsoft Office</figcaption>
-		</figure>
-	</td>
-</tr>
-        <tr>
-          <div class="coloumns" align="center">
-            <div class="social-icons">
-              <a alt
-                href="https://www.linkedin.com/in/nayla-alzahra-7967b6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i
-                  class="fa-brands fa-linkedin"></i></a>
-              <a href="https://github.com/dazaissi"><i class="fa-brands fa-github"></i></a>
-              <a href="https://wa.me/+6283853085889"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="https://instagram.com/nanaypixels"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://discord.gg/ZtKuVbPS"><i class="fa-brands fa-discord"></i></a>
-            </div>
-            <td>
+        </span>
+      </strong>
+    </h1>
+    
+    <div class="table-container">
+      <table width="100%" border="0">
+        <tbody>
+          <tr>
+            <td width="50%" rowspan="2">
+              <frame>
+                <img src="kalender.jpg" width="469" height="432" alt=""/>
+              </frame>
             </td>
-        </tr>
-      </tbody>
-    </table>
+            <td style="font-size: 25px; text-align: justify;color: #bed7dc;">
+              Hello, my name is <b style="color: #EBE3D5;">Nayla Alzahra</b>, but free to call me Nanay or whatever you like.
+              I blow candles on my cake every <b style="color:#EBE3D5;"> 27th February</b>. I'm an Introvert who prefers
+              indoor activities, such as <strong style="color: #c4c1b2;">genshin, napping, doing makeup, watching anime and
+              reading alternative universe (au) in twitter.</strong>
+              Moving on to my personality, I'm not much of a talker in real life but when it comes to my best friends, I can
+              be downright crazy and sort of a troll.<br>
+              <br>
+              <p style="font-size: 25px;text-align: justify; color: #bed7dc;">
+                Now I'm a student in <strong style="color: #EBE3D5;">STMIK LIKMI BANDUNG</strong> and I take <strong
+                style="color:#c4c1b2;">Information System major</strong>. I'm in the first semester this year.
+              </p>
+            </td>
+          </tr>
 
+          <tr>
+            <td>
+              <p style="font-size: 25px;text-align: justify; color: #bed7dc;">
+                <b style="font-weight: bold; font-size: xx-large;">ACTIVITIES</b>
+              </p>
+              <ul style="color: #C4C1B2; font-size: 20px;">
+                <li>2024 - <em>PRESENT</em>
+                  <p><span style="font-style: italic; color: #EBE3D5;">Leader of Ukhuwah LIKMI Community</span></p>
+                </li>
+                <li>2024 - <em>PRESENT</em>
+                  <p><span style="font-style: italic; color: #EBE3D5;">Member of Cakrawala Literasi Sastra (CLS)</span></p>
+                </li>
+                <li>2023 - 2024
+                  <p><span style="color: #EBE3D5;"><em>Secretary of Keputrian PR IPM SMAMSA</em></span></p>
+                </li>
+              </ul>
+            </td>
+          </tr>
 
-    <div>
-      <div>
+          <tr>
+            <td>
+              <p style="text-align: left; font-size: xx-large; font-weight: bold; color: #C4C1B2;">GALLERY</p>
+              <div class="gallery">
+                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','nanay11.jpg',1)">
+                  <img src="nanay10.jpg" alt="" width="162" height="216" id="Image5">
+                </a>
+                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','nanay17.jpg',1)">
+                  <img src="nanay16.jpg" alt="" width="162" height="216" id="Image6">
+                </a>
+                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','nanay21.jpg',1)">
+                  <img src="nanay20.jpg" alt="" width="162" height="216" id="Image7">
+                </a>
+              </div>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
 
+          <tr>
+            <td>
+              <h2 style="text-align: center; font-size: xx-large; color: #bed7dc;">LANGUAGE</h2>
+              <ul class="language-list">
+                <li>
+                  <label for="indonesian"><span style="color: #BED7DC">Indonesian:</span></label>
+                  <progress id="indonesian" value="100" max="100">100%</progress>
+                </li>
+                <li>
+                  <label for="sundanese" style="color: #C4C1B2">Sundanese:</label>
+                  <progress id="sundanese" max="100" value="85">85%</progress>
+                </li>
+                <li>
+                  <label for="english"><span style="color: #bed7dc">English:</span></label>
+                  <progress id="english" value="75" max="100">75%</progress>
+                </li>
+                <li>
+                  <label for="korean" style="color: #C4C1B2">Korean:</label>
+                  <progress id="korean" value="25" max="100">25%</progress>
+                </li>
+                <li>
+                  <label for="japanese" style="color: #BED7DC">Japanese:</label>
+                  <progress id="japanese" value="12" max="100">12%</progress>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <h2 style="text-align: center; font-size: xx-large; color: #bed7dc;">SOFTWARE</h2>
+              <ul class="software-list">
+                <li class="logo-hover">
+                  <a href="https://www.adobe.com/in/products/dreamweaver.html?msockid=20ef2ca6b48f6a2f322039eeb5d96b7c">
+                    <img src="adobe_dw.png" width="41">
+                  </a>
+                  <figcaption style="color: #C4C1B2"><span style="font-weight: bold">Adobe Dreamweaver</span></figcaption>
+                </li>
+                <li>
+                  <a href="https://code.visualstudio.com/">
+                    <img src="vscode.png" width="38">
+                  </a>
+                  <figcaption style="font-weight: bold; color: #BED7DC">Visual Studio Code</figcaption>
+                </li>
+                <li>
+                  <a href="https://www.capcut.com/">
+                    <img src="capcut.webp" width="38">
+                  </a>
+                  <figcaption style="color: #bed7dc; font-weight: bold;">Capcut</figcaption>
+                </li>
+                <li>
+                  <a href="https://www.microsoft.com/id-id/microsoft-365/free-office-online-for-the-web?msockid=20ef2ca6b48f6a2f322039eeb5d96b7c">
+                    <img src="office.jpg" width="38">
+                  </a>
+                  <figcaption style="color: #C4C1B2; font-weight: bold;">Microsoft Office</figcaption>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <div class="social-icons" style="text-align: center;">
+                <a alt href="https://www.linkedin.com/in/nayla-alzahra-7967b6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/dazaissi">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://wa.me/+6283853085889">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/nanaypixels">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://discord.gg/ZtKuVbPS">
+                  <i class="fa-brands fa-discord"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
+  
   <footer>
     <p style="font-size: small">© 2024 Nayla Alzahra | All right reserved.</p>
-</footer>
+  </footer>
+  
   <script type="text/javascript">
     $(function () {
       $("#Slider1").slider();
     });
   </script>
 </body>
-
 </html>
-
-
-
-
-
-
